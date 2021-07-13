@@ -11,7 +11,7 @@ def kmer_account(main_text, k):
 
     return kmer_account
 
-'''
+
 def unique_kmer_list(main_text, k):
     kmer_list = []
 
@@ -19,28 +19,27 @@ def unique_kmer_list(main_text, k):
         kmer = main_text[i: i + k]
         kmer_list.append(kmer)
         # print(kmer + "\n")
-        unique_kmer_list = list(set(kmer_list))
 
+    unique_kmer_list = list(set(kmer_list))
     return unique_kmer_list
-'''
+
 
 main_path = sys.argv[1]
 k = int(sys.argv[2]) #int(): str -> int
 
 main_text = open(main_path, "r")
 lines = main_text.readlines()
+line = main_text.readline()
 
-'''
+
 main_sequence = ""
 for line in lines:
     main_sequence += line.strip()
-    #print(line.strip())
-'''
-
 
 main_text.close()
 
-print(lines)
+
+#print(lines)
 print(len(main_sequence))
 print(kmer_account(main_sequence, k))
 print(len(unique_kmer_list(main_sequence, k)))

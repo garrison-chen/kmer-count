@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70b765c8-493d-4a3a-8ce3-8ea163040dc9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kmers_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/kmers_account.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,9 +94,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="163" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1626005593472" />
-    <state x="653" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1626189184658">
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1626210459590">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="653" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1626189184658" />
+    <state x="653" y="372" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1626210459590" />
   </component>
 </project>
