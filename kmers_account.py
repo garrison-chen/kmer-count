@@ -41,6 +41,6 @@ for line in lines:
 main_text.close()
 
 print(lines)
-#print(len(main_sequence))
-#print(kmer_account(main_sequence, k))
-#print(len(unique_kmer_list(main_sequence, k)))
+print(len(main_sequence))
+print(kmer_account(main_sequence, k))
+print(len(unique_kmer_list(main_sequence, k)))
