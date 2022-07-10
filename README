@@ -1,4 +1,4 @@
-#A basic tool for summarizing kmer stats
+# A basic tool for summarizing kmer stats
 
 Input: a fasta file
 Output: kmer stats
