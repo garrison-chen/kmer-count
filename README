@@ -1,5 +1,10 @@
-A basic tool for summarizing kmer stats
+#A basic tool for summarizing kmer stats
 
 Input: a fasta file
 Output: kmer stats
 
+how to use:
+```
+git clone https://github.com/garrison-chen/kmer-count.git
+python kmers_account.py /path/to/your/fasta/file kmer-size
+```
