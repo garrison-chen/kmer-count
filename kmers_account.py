@@ -2,10 +2,10 @@ import sys
 import os.path
 
 
-def kmer_account(main_text, k):
+def kmer_account(main_sequence, k):
     kmer_account = 0
 
-    for i in range(0, len(main_text) - k + 1):
+    for i in range(0, len(main_sequence) - k + 1):
         kmer_account += 1
         # print(kmer + "\n")
 
@@ -21,7 +21,21 @@ def unique_kmer_list(main_text, k):
         # print(kmer + "\n")
 
     unique_kmer_list = list(set(kmer_list))
+    unique_kmer_list.sort()
     return unique_kmer_list
+
+
+def most_abundant_kmer(main_sequence, k):
+    kmer_dict = {}
+    for i in range(0, len(main_sequence) - k + 1):
+        kmer = main_sequence[i: i + k]
+        if kmer_dict.get(kmer):
+            kmer_dict[kmer] += 1
+        else:
+            kmer_dict[kmer] = 0
+            
+    most_abundant_kmer = max(kmer_dict, key = kmer_dict.get)
+    return most_abundant_kmer
 
 
 main_path = sys.argv[1]
@@ -34,12 +48,17 @@ line = main_text.readline()
 
 main_sequence = ""
 for line in lines:
-    main_sequence += line.strip()
+    if line[0] != '>':
+        main_sequence += line.strip()
 
 main_text.close()
 
 
 #print(lines)
-print(len(main_sequence))
-print(kmer_account(main_sequence, k))
-print(len(unique_kmer_list(main_sequence, k)))
+print("The total length of input sequence: " + str(len(main_sequence)))
+print("The total kmer count: " + str(kmer_account(main_sequence, k)))
+unique_kmer_list = unique_kmer_list(main_sequence, k)
+print("The total unique kmer count: " + str(len(unique_kmer_list)))
+print("The lexicogrphically smallest kmer: " + str(unique_kmer_list[0]))
+print("The lexicographically largest kmer: " + str(unique_kmer_list[len(unique_kmer_list)-1]))
+print("The most abundant kmer: " + str(most_abundant_kmer(main_sequence, k)))
